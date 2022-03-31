@@ -6,8 +6,6 @@ import { Observable, Subject } from 'rxjs';
 })
 export class UiService {
   private showTaskForm = false;
-  private showButton = true;
-  private buttonSubject = new Subject<boolean>();
   private subject = new Subject<boolean>();
 
   constructor() { }
@@ -15,15 +13,6 @@ export class UiService {
   toggleTaskForm(): void {
     this.showTaskForm = !this.showTaskForm;
     this.subject.next(this.showTaskForm);
-  }
-
-  changeButtonVisibility(): void {
-    this.showButton = !this.showButton;
-    this.buttonSubject.next(this.showButton);
-  }
-
-  toggleButton(): Observable<boolean> {
-    return this.buttonSubject.asObservable();
   }
 
   onToggle(): Observable<boolean> {

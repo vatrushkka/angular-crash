@@ -25,6 +25,10 @@ export class TaskFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
   clearForm(): void {
     this.text = '';
     this.day = '';

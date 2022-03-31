@@ -1,7 +1,6 @@
-import {Component, Input, Output, OnInit} from '@angular/core';
-import {Task} from '../../Task';
-// import {TaskService} from '../../services/task.service';
-import {EventEmitter} from '@angular/core';
+import { Component, Input, Output, OnInit } from '@angular/core';
+import { Task } from '../../Task';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-task-item',
@@ -13,9 +12,7 @@ export class TaskItemComponent implements OnInit {
   @Output() deleteTask = new EventEmitter();
   @Output() toggleReminder = new EventEmitter();
 
-  constructor(
-    // private taskService: TaskService
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

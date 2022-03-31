@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-about',
@@ -8,14 +7,7 @@ import { UiService } from '../../services/ui.service';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private uiService: UiService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.uiService.changeButtonVisibility();
-  }
-
-  ngOnDestroy(): void {
-    this.uiService.changeButtonVisibility();
-  }
-
+  ngOnInit(): void {  }
 }
