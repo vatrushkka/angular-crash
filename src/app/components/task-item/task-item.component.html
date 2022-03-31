@@ -1,0 +1,12 @@
+<div class="task" (dblclick)="onToggleReminder(task)">
+  <div class="task-reminder" *ngIf="task.reminder"></div>
+
+  <h2 class="task-header">{{task.text }}</h2>
+  <p class="task-day">{{task.day}}</p>
+
+  <div class="task-remove">
+    <i
+      class="fa-solid fa-xmark"
+      (click)="onDelete(task)"></i>
+  </div>
+</div>
